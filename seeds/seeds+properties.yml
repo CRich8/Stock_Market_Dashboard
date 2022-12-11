@@ -1,0 +1,15 @@
+version: 2
+
+seeds: 
+  - name: tsla_overview
+    description: >
+      Information, financial ratios, and other key metrics for Tesla
+  - name: msft_overview
+    description: >
+      Information, financial ratios, and other key metrics for Microsoft
+  - name: goog_overview
+    description: >
+      Information, financial ratios, and other key metrics for Google
+  - name: aapl_overview
+    description: >
+      Information, financial ratios, and other key metrics for Apple

@@ -26,11 +26,20 @@ _50DayMovingAverage,
 grossProfit,
 totalRevenue,
 costOfRevenue,
-netIncome
+i.netIncome,
+c.operatingCashflow,
+c.paymentsForOperatingActivities,
+c.profitLoss,
+c.changeInOperatingLiabilities,
+c.changeInOperatingAssets,
+round(f.close / o.DilutedEPSTTM,2) as PE
 from {{ ref('fact_stock') }} f
-inner join {{ ref('msft_overview') }} m
-on f.symbol = m.symbol
+inner join {{ ref('msft_overview') }} o
+on f.symbol = o.symbol
 left join {{ ref('stg_msft_inc_stm') }} i
 on f.symbol = i.symbol
 and f.year = i.year
+left join {{ ref('stg_msft_cash_flow') }} c
+on f.symbol = c.symbol
+and f.year = c.year
 order by date desc

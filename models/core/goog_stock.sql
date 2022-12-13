@@ -26,11 +26,20 @@ _50DayMovingAverage,
 grossProfit,
 totalRevenue,
 costOfRevenue,
-netIncome
+i.netIncome,
+c.operatingCashflow,
+c.paymentsForOperatingActivities,
+c.profitLoss,
+c.changeInOperatingLiabilities,
+c.changeInOperatingAssets,
+f.close / o.DilutedEPSTTM as PE
 from {{ ref('fact_stock') }} f
-inner join {{ ref('goog_overview') }} g
-on f.symbol = g.symbol
+inner join {{ ref('goog_overview') }} o
+on f.symbol = o.symbol
 left join {{ ref('stg_goog_inc_stm') }} i
 on f.symbol = i.symbol
 and f.year = i.year
+left join {{ ref('stg_goog_cash_flow') }} c
+on f.symbol = c.symbol
+and f.year = c.year
 order by date desc

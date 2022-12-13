@@ -13,3 +13,7 @@ seeds:
   - name: aapl_overview
     description: >
       Information, financial ratios, and other key metrics for Apple
+  - name: aapl_incstm
+  - name: tsla_incstm
+  - name: goog_incstm
+  - name: msft_incstm

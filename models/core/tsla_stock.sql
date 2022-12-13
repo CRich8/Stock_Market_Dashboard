@@ -33,4 +33,6 @@ on f.symbol = t.symbol
 left join {{ ref('stg_tsla_inc_stm') }} i
 on f.symbol = i.symbol
 and f.year = i.year
+left join {{ ref('tsla_cash_flow') }}
+on
 order by date desc

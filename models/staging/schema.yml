@@ -17,10 +17,10 @@ sources:
     schema: stock_data_all
 
     tables:
-      - name: aapl_full_12_9
-      - name: goog_full_12_9
-      - name: msft_full_12_9
-      - name: tsla_full_12_9
+      - name: aapl_daily_stock_external_table
+      - name: goog_daily_stock_external_table
+      - name: msft_daily_stock_external_table
+      - name: tsla_daily_stock_external_table
 
 
 models:

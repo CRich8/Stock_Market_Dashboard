@@ -12,6 +12,6 @@ Dividend_Amount,
 Split_coefficient,
 'GOOG' as Symbol,
 extract(year from date) as Year
-from {{ source('staging','goog_full_12_9') }}
+from {{ source('staging','goog_daily_stock_external_table') }}
 where date is not null
 order by date desc

@@ -1,4 +1,3 @@
-
 FROM apache/airflow:2.2.3
 
 ENV AIRFLOW_HOME=/opt/airflow

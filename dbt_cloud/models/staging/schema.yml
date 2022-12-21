@@ -1,0 +1,34 @@
+
+version: 2
+
+sources:
+  - name: core
+    database: stock-project-371020
+    schema: dbt_crich
+
+    tables:
+      - name: msft_inc_stm
+      - name: aapl_inc_stm
+      - name: goog_inc_stm
+      - name: tsla_inc_stm
+
+  - name: staging
+    database: stock-project-371020
+    schema: stock_data_all
+
+    tables:
+      - name: aapl_daily_stock_external_table
+      - name: goog_daily_stock_external_table
+      - name: msft_daily_stock_external_table
+      - name: tsla_daily_stock_external_table
+
+
+models:
+    - name: stg_aapl_stockdata
+    - name: stg_goog_stockdata
+    - name: stg_msft_stockdata
+    - name: stg_tsla_stockdata
+    - name: stg_tsla_inc_stm
+    - name: stg_msft_inc_stm
+    - name: stg_goog_inc_stm
+    - name: stg_aapl_inc_stm

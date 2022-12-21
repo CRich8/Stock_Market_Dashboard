@@ -1,6 +1,6 @@
 # Stock Market Dashboard
 
-This project contains an ELT pipeline that uses Google Cloud Platform to extract stock market data from [Alpha Vantage](https://www.alphavantage.co/) and transforms it into a single database for analytics applications.
+This project contains an ELT pipeline that uses Airflow, DBT and Google Cloud Platform to extract stock market data from [Alpha Vantage](https://www.alphavantage.co/) and transforms it into a single database for analytics applications.
 
 ## Overview
 

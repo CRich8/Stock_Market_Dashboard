@@ -12,6 +12,6 @@ Dividend_Amount,
 Split_coefficient,
 'MSFT' as Symbol,
 extract(year from date) as Year
-from {{ source('staging','msft_full_12_9') }}
+from {{ source('staging','msft_daily_stock_external_table') }}
 where date is not null
 order by date desc

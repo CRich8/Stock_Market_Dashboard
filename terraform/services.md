@@ -1,4 +1,4 @@
-### Running Terraform
+### Running Terraform:
 
 
 #### 1. Initialization

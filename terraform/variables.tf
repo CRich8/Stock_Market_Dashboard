@@ -1,5 +1,5 @@
 locals {
-  data_lake_bucket = "alpha_vantage_data_lake"
+  data_lake_bucket = "stock_data_lake_stock-project"
 }
 
 variable "project" {
@@ -24,5 +24,5 @@ variable "BQ_DATASET" {
 }
 
 variable "credentials" {
-  default = "/Users/connorrich/.google/credentials/oedi_google_credentials.json"
+  default = "C:/Users/Connor/.google/credentials/stock_project_google_credentials.json"
 }

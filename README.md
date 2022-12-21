@@ -8,7 +8,7 @@ Airflow, hosted by Docker, is used to orchestrate the ingestion of stock ddata i
 
 Please [visit the dashboard here.](https://public.tableau.com/views/StockMArketDashboard/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
-The technologies used iin the pipeline are listed below.
+The technologies used in the pipeline are listed below.
 
 -GCP: BigQuery and Google Cloud Storage were used to store and query the data.
 

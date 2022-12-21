@@ -1,5 +1,4 @@
 {{ config(materialized='view') }}
-
 select
 'AAPL' as Symbol,
 fiscalDateEnding,

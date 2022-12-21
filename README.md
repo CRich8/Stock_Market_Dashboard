@@ -10,8 +10,12 @@ Please visit the dashboard here: [https://public.tableau.com/app/profile/c3794/v
 
 The technologies used iin the pipeline are listed below.
 
--GCP: BigQuery and Google Cloud Storage were used to store and query the data
+-GCP: BigQuery and Google Cloud Storage were used to store and query the data.
+
 -Terraform: Terraform was used to manage GCP resources.
+
 -Docker: Docker was used to host Airflow.
--DBT: DBT was used to transform and model the data in BigQuery
+
+-DBT: DBT was used to transform and model the data in BigQuery.
+
 -Airflow: Airflow was used to orchestrate the data ingestion to GCP.

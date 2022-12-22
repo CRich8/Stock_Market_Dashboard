@@ -58,7 +58,7 @@ def get_stock_data(url):
         file.write(df_final)
 
 OUTPUT_FILE_TEMPLATE = AIRFLOW_HOME + f"/aapl_output_daily_stock_adjusted.csv"
-CSV_FILE = f"aapl_daily_stock_adjusted.csv"
+CSV_FILE = "aapl_daily_stock_adjusted.csv"
 DATASET = "aapl_daily_stock"
 INPUT_FILETYPE = "csv"
 

@@ -58,7 +58,7 @@ def get_stock_data(url):
         file.write(df_final)
 
 OUTPUT_FILE_TEMPLATE = AIRFLOW_HOME + f"/msft_output_daily_stock_adjusted.csv"
-CSV_FILE = f"msft_daily_stock_adjusted.csv"
+CSV_FILE = "msft_daily_stock_adjusted.csv"
 DATASET = "msft_daily_stock"
 INPUT_FILETYPE = "csv"
 
@@ -82,14 +82,14 @@ with DAG(
 
 
     downlod_dataset_python_task = PythonOperator(
-        task_id=f"download_daily_stock_adjusted_dataset_task",
+        task_id="download_daily_stock_adjusted_dataset_task",
         python_callable=get_stock_data,
          op_kwargs={
              "url": url
         },
     )
     local_to_gcs_task = PythonOperator(
-        task_id=f"local_daily_stock_adjusted_dataset_to_gcs_task",
+        task_id="local_daily_stock_adjusted_dataset_to_gcs_task",
         python_callable=upload_to_gcs,
         op_kwargs={
             "bucket": BUCKET,
@@ -99,13 +99,13 @@ with DAG(
     )
 
     rm_task = BashOperator(
-        task_id=f"rm_daily_stock_adjusted_dataset_task",
+        task_id="rm_daily_stock_adjusted_dataset_task",
         bash_command=f"rm {OUTPUT_FILE_TEMPLATE}"
     )
 
 
     bigquery_external_table_task = BigQueryCreateExternalTableOperator(
-        task_id=f"bq_daily_stock_external_table_task",
+        task_id="bq_daily_stock_external_table_task",
         table_resource={
             "tableReference": {
                 "projectId": PROJECT_ID,
